@@ -314,51 +314,6 @@ def filter_by_type(database):
 
 
 
-
-# def delete_grain(database):
-#     while True:
-#         print(f'''
-#                 1. Delete menu
-#                 2. Back to main menu''')
-
-#         choice = input('Enter your choice: ')
-#         if choice == '1':
-#             while True:
-#                 simplified_data = [[value[5], value[1], value[2]] for value in database.values()]
-#                 print(tabulate(simplified_data, headers=["ID", "Name", "Type"], tablefmt="grid"))
-
-#                 code_todelete = integer_validation("Enter code of the grain to delete: ", (database))
-
-#                 grain_to_delete = None
-#                 for key, value in database.items():
-#                     if value[0] == code_todelete:
-#                         grain_to_delete = key
-#                         break
-
-#                 if not grain_to_delete:
-#                     print("No grain found with that ID.")
-#                     continue
-
-#                 print("Details of the grain to be deleted:")
-#                 print(tabulate([database[grain_to_delete]], headers=["ID", "Name", "Type", "Other details..."], tablefmt="grid"))
-                
-#                 confirmation_choice = input('Do you want to delete the item?\n1. Yes, delete\n2. No, delete another item\n3. Back to main menu\nEnter your choice: ')
-
-#                 if confirmation_choice == '1':
-#                     del database[grain_to_delete]
-#                     print("Grain deleted successfully.")
-#                     break
-#                 elif confirmation_choice == '2':
-#                     continue
-#                 elif confirmation_choice == '3':
-#                     break
-#                 else:
-#                     print("Invalid choice, please try again.")
-#         elif choice == '2':
-#             break
-#         else:
-#             print("Input invalid! Please input choice 1 or 2.")
-
 def delete_grain(database):
     while True:
         print(f'''
