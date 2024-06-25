@@ -269,8 +269,6 @@ def update_grain(database):
 
 
 
-
-
 def filter_by_type(database):
     while True:
         print(f'''
@@ -313,7 +311,6 @@ def filter_by_type(database):
             print("Invalid choice, please try again.")
 
 
-
 def delete_grain(database):
     while True:
         print(f'''
@@ -323,7 +320,9 @@ def delete_grain(database):
         choice = input('Enter your choice: ')
         if choice == '1':
             while True:
-                print(tabulate(list(database.values()), headers=["ID", "Name", "Type", "Quantity", "Price", "Code"], tablefmt="grid"))
+                
+                reordered_data = [[value[5], value[1], value[2], value[3], value[4]] for value in database.values()]
+                print(tabulate(reordered_data, headers=["Code", "Name", "Type", "Quantity", "Price"], tablefmt="grid"))
 
                 code_todelete = input("Enter code of the grain to delete: ").strip()
 
@@ -333,7 +332,7 @@ def delete_grain(database):
 
                 grain_to_delete = None
                 for key, value in database.items():
-                    if value[5] == code_todelete:  # Assuming the code is the last element in the list
+                    if value[5] == code_todelete:  
                         grain_to_delete = key
                         break
 
@@ -341,8 +340,12 @@ def delete_grain(database):
                     print("No grain found with that code.")
                     continue
 
+                
+                grain_details = [database[grain_to_delete]]
+                reordered_grain_details = [[value[5], value[1], value[2], value[3], value[4]] for value in grain_details]
+
                 print("Details of the grain to be deleted:")
-                print(tabulate([database[grain_to_delete]], headers=["ID", "Name", "Type", "Quantity", "Price", "Code"], tablefmt="grid"))
+                print(tabulate(reordered_grain_details, headers=["Code", "Name", "Type", "Quantity", "Price"], tablefmt="grid"))
                 
                 confirmation_choice = input('Do you want to delete the item?\n1. Yes, delete\n2. No, delete another item\n3. Back to main menu\nEnter your choice: ')
 
@@ -362,7 +365,6 @@ def delete_grain(database):
             print("Input invalid! Please input choice 1 or 2.")
 
 
-     
 
 def view_statistics(database):
     if not database:
