@@ -1,2 +1,3 @@
+![image](https://github.com/Anjarwenig/EcoGrain-Oasis-Project/assets/171644351/c6b8d9ab-9154-44ef-9613-706c5471d45d)![image](https://github.com/Anjarwenig/EcoGrain-Oasis-Project/assets/171644351/9582b996-dd59-4233-8212-b6a4ac9e077e)
 
 EcoGrain Oasis: Your Premium Grain Destination founded in 2026. EcoGrain Oasis is located in the heart of Phoenix, Arizona. We are dedicated to providing a diverse selection of high-quality grains, both organic and non-organic, to meet the varied needs of our customers. Our store offers a unique blend of traditional and innovative grain products, catering to health-conscious consumers, culinary enthusiasts, and everyone in between.
